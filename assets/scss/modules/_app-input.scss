@@ -1,0 +1,20 @@
+.app-input {
+  @include text-lg;
+  padding: 3px 0;
+  background-color: transparent;
+  color: var(--text-secondary-color);
+  border: none;
+  border-bottom: 1px solid var(--text-secondary-color);
+  transition: color $tr-default, border-bottom-color $tr-default;
+
+  &:not(:placeholder-shown) {
+    color: var(--contrast-color);
+    border-bottom: 1px solid var(--contrast-color);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+}

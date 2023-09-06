@@ -1,0 +1,17 @@
+@mixin font($fontFamily: '', $fontFolderName: '', $fontWeight: 400, $fontStyle: normal, $fontDisplay: swap) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url('~/assets/fonts/#{$fontFolderName}/#{$fontWeight}.woff2') format('woff2'),
+    url('~/assets/fonts/#{$fontFolderName}/#{$fontWeight}.woff') format('woff');
+    font-style: $fontStyle;
+    font-weight: $fontWeight;
+    font-display: $fontDisplay;
+  }
+}
+
+@include font('Montserrat', 'Montserrat', 300);
+@include font('Montserrat', 'Montserrat', 400);
+@include font('Montserrat', 'Montserrat', 500);
+@include font('Montserrat', 'Montserrat', 600);
+@include font('Montserrat', 'Montserrat', 700);
+@include font('Montserrat', 'Montserrat', 800);

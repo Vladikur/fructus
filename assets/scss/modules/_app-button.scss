@@ -1,0 +1,28 @@
+.app-button {
+  @include text-lg;
+  display: block;
+  padding: 1rem 5rem;
+  background-color: var(--text-color);
+  color: var(--contrast-color);
+  border: none;
+  transition: background-color $tr-default;
+  cursor: pointer;
+  text-decoration: none;
+
+  &._contrast {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+
+    @include hover {
+      background-color: transparent;
+    }
+  }
+
+  @include --mobile {
+    padding: 0.8rem 3rem;
+  }
+
+  @include hover {
+    background-color: var(--accent-color);
+  }
+}
